@@ -42,46 +42,117 @@ def consolidate_csv_files(folder_path="utilities/workshop_parts"):
     # Process each CSV file
     for file in csv_files:
         try:
-            # Read the CSV file line by line
             with open(file, 'r', encoding='utf-8') as f:
                 for line in f:
                     line = line.strip()
                     if line and ',' in line:
-                        # Split the line into item and quantity
                         parts = line.split(',', 1)
                         if len(parts) == 2:
                             item = parts[0].strip()
                             try:
                                 quantity = int(parts[1].strip())
-                                # Add to our item quantities dictionary
-                                if item in item_quantities:
-                                    item_quantities[item] += quantity
-                                else:
-                                    item_quantities[item] = quantity
+                                item_quantities[item] = item_quantities.get(item, 0) + quantity
                             except ValueError:
-                                # Skip lines where quantity isn't a valid integer
                                 continue
         except Exception as e:
             print(f"Error reading file {file}: {str(e)}")
-    
-    # Convert to DataFrame and sort alphabetically by item
-    if item_quantities:
-        df = pd.DataFrame(
-            [[item, qty] for item, qty in item_quantities.items()],
-            columns=['Item', 'Quantity']
-        ).sort_values('Item').reset_index(drop=True)
-        
-        # Save to output.csv without headers
-        output_path = 'utilities/workshop_output.csv'
-        df.to_csv(output_path, index=False, header=False)
-        print(f"Consolidated CSV saved to {output_path} (without headers)")
-        
-        return df
-    else:
+
+    if not item_quantities:
         print("No valid data found in the CSV files")
         return None
 
+    # Convert to DataFrame and sort
+    df = pd.DataFrame(
+        [[item, qty] for item, qty in item_quantities.items()],
+        columns=['Item', 'Quantity']
+    ).sort_values('Item').reset_index(drop=True)
 
+    # Load recipe and gathering info
+    try:
+        recipe_book_csv = os.path.join("utilities", "recipe_book.csv")
+        recipe_gathering_csv = os.path.join("utilities", "recipe_gathering.csv")
+
+        df_recipe_book = load_csv_with_max_columns(recipe_book_csv)
+        df_recipe_gathering = load_csv_with_max_columns(recipe_gathering_csv)
+    except Exception as e:
+        print(f"Warning: Unable to load recipe or gathering data for crystal calculation: {e}")
+        df["Crystals Needed"] = ""
+        return df
+
+    max_fields = df_recipe_book.shape[1]
+    recipes = {}
+    for _, row in df_recipe_book.iterrows():
+        product = row[0]
+        ingredients = []
+        for i in range(1, max_fields, 2):
+            if pd.isna(row[i]):
+                break
+            ing = row[i]
+            qty = float(row[i + 1]) if (i + 1 < max_fields and not pd.isna(row[i + 1])) else 0.0
+            ingredients.append((ing, qty))
+        recipes[product] = ingredients
+
+    df_recipe_gathering.rename(columns={0: "Ingredient", 1: "Method"}, inplace=True)
+    method_map = {row["Ingredient"]: row["Method"] for _, row in df_recipe_gathering.iterrows()}
+
+    # Recursive crystal computation
+    def compute_crystals(item, multiplier=1):
+        crystal_totals = defaultdict(float)
+
+        if item in recipes:
+            for ing, qty in recipes[item]:
+                options = [opt.strip() for opt in str(ing).split('|')]
+
+                if len(options) == 1:
+                    sub_totals = compute_crystals(options[0], qty * multiplier)
+                    for k, v in sub_totals.items():
+                        crystal_totals[k] += v
+                else:
+                    for opt in options:
+                        sub_totals = compute_crystals(opt, qty * multiplier / len(options))
+                        for k, v in sub_totals.items():
+                            alt_key = f"{k} (alt)"
+                            crystal_totals[alt_key] += v
+
+        elif method_map.get(item, "").lower() == "crystal":
+            crystal_totals[item] += multiplier
+
+        return crystal_totals
+
+    # Build final crystals-needed column
+    crystal_list = []
+    for _, row in df.iterrows():
+        item_name = row["Item"]
+        item_qty = row["Quantity"]
+        crystals_needed = compute_crystals(item_name, item_qty)
+
+        required = []
+        alternatives = []
+
+        for k, v in crystals_needed.items():
+            if "(alt)" in k:
+                alt_name = k.replace(" (alt)", "").strip()
+                alternatives.append(f"{alt_name} x {int(v)}")
+            else:
+                required.append(f"{k} x {int(v)}")
+
+        combined = []
+        if required:
+            combined.append(" & ".join(required))
+        if alternatives:
+            combined.append(" | ".join(alternatives))
+
+        crystal_str = " & ".join(combined)
+        crystal_list.append(crystal_str)
+
+    df["Crystals Needed"] = crystal_list
+
+    # Save standard 2-column output
+    output_path = os.path.join("utilities", "workshop_output.csv")
+    df[["Item", "Quantity"]].to_csv(output_path, index=False, header=False)
+    print(f"Consolidated CSV saved to {output_path} (without headers)")
+
+    return df
 
 # --- Gathering List Generation ---
 
@@ -120,7 +191,10 @@ def generate_gathering_list(total_csv, recipe_book_csv, recipe_gathering_csv, ou
     def compute_requirements(item, multiplier):
         if item in recipes:
             for ingredient, qty in recipes[item]:
-                compute_requirements(ingredient, qty * multiplier)
+                # Handle alternative ingredients split by '|'
+                options = [opt.strip() for opt in str(ingredient).split('|')]
+                for opt in options:
+                    compute_requirements(opt, qty * multiplier / len(options))
         else:
             requirements[item] += multiplier
 

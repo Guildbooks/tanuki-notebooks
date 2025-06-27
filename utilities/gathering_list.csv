@@ -51,9 +51,9 @@ Eikon Mythrite,360.0,npc,Sold by Spoils Collector
 Electrum Ore,576.0,normal,Upper La Noscea ( 30.4 / 25.4 )
 Emery,6.0,gc seals,Sold for 1500 GC Seals
 Ferberite,198.0,timed node,"Northern Thanalan ( 17.3 / 19.9 ), Timed at 3:00am ET"
-Fire Cluster,2625.0,crystal,Market Board 💀
-Fire Crystal,19533.0,crystal,Market Board 💀
-Fire Shard,32361.0,crystal,Market Board 💀
+Fire Cluster,1773.0,crystal,Market Board 💀
+Fire Crystal,10156.5,crystal,Market Board 💀
+Fire Shard,16579.5,crystal,Market Board 💀
 Flax,684.0,normal,South Shroud ( 17.6 / 28.6 )
 Gagana Skin,72.0,drop,"The Fringes ( 27.1 / 18 ), Dropped by Gagana"
 Gelato Flesh,522.0,drop,"Coerthas Western Highlands ( 9.4 / 18.8 ), Dropped by Gelato"
@@ -66,9 +66,9 @@ Hardsilver Ore,336.0,normal,The Dravanian Forelands ( 25.3 / 25 )
 Hardsilver Sand,2535.0,normal,The Churning Mists ( 15.9 / 28.5 )
 Hippogryph Skin,12.0,drop,"Mor Dhona ( 26.8 / 8.3 ), Dropped by Hippogryph"
 Holy Water,144.0,npc,Sold by Idyllshire Scrap Salvager
-Ice Cluster,351.0,crystal,Market Board 💀
-Ice Crystal,2394.0,crystal,Market Board 💀
-Ice Shard,7374.0,crystal,Market Board 💀
+Ice Cluster,1203.0,crystal,Market Board 💀
+Ice Crystal,11551.5,crystal,Market Board 💀
+Ice Shard,22738.5,crystal,Market Board 💀
 Iron Ore,8835.0,npc,Purchased from BSM/ARM Guild Vendor Outside
 Kamacite Ore,108.0,voyages,Collected from Submarine Voyages
 Koppranickel Sand,360.0,normal,The Peaks ( 23.3 / 13.1 )
@@ -78,8 +78,7 @@ Lightning Shard,270.0,crystal,Market Board 💀
 Lumythrite Ore,540.0,timed node,"The Churning Mists ( 9.3 / 38.5 ), Timed at 2AM/PM ET (Legendary)"
 Mahogany Log,54.0,normal,Eastern La Noscea ( 19.4 / 25.6 )
 Molybdenum Ore,480.0,normal,The Lochs ( 11.4 / 16.6 )
-Mythril  Rivets,60.0,unknown,
-Mythril Ore,3411.0,normal,Southern Thanalan ( 25.2 / 39.9 )
+Mythril Ore,3591.0,normal,Southern Thanalan ( 25.2 / 39.9 )
 Mythrite Ore,2916.0,normal,Coerthas Western Highlands ( 31.2 / 12.8 )
 Mythrite Sand,4500.0,normal,Coerthas Western Highlands ( 16.6 / 13.1 )
 Native Gold,90.0,timed node,"Central Thanalan ( 25.2 / 15.8 ), Timed at 4:00am ET"
@@ -141,8 +140,8 @@ Whale-Class Bridge,1.0,unknown,
 Whale-Class Pressure Hull,1.0,unknown,
 Whale-Class Stern,1.0,unknown,
 Wind Cluster,1812.0,crystal,Market Board 💀
-Wind Crystal,9648.0,crystal,Market Board 💀
-Wind Shard,1848.0,crystal,Market Board 💀
+Wind Crystal,11187.0,crystal,Market Board 💀
+Wind Shard,2745.0,crystal,Market Board 💀
 Wyvern Skin,108.0,drop,"Coerthas Western Highlands (X:19.5 Y:35.9), Rare drop from wyverns"
 Wyvern Wing,219.0,drop,"The Churning Mists ( 24 / 28 ), Dropped by various wyverns."
 Yew Log,54.0,normal,East Shroud ( 15.2 / 27.4 )

@@ -111,7 +111,6 @@ def assign_ids(input_filename, output_filename):
 
     # Write the final merged CSV.
     final_df.to_csv(output_filename, index=False)
-    print("Merged CSV written to 'final_nodes_with_ids.csv'.")
 
 def sort_for_current_time(input_filename, output_filename):
     # -----------------------
@@ -273,4 +272,3 @@ def generate_market_data(input_filename, output_filename):
     # 4. Save the augmented DataFrame to a new CSV file and display it.
     # -----------------------
     df_top10.to_csv(output_filename, index=False)
-    print("CSV file with market data saved as 'final_nodes_with_ids_market.csv'.")
