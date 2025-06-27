@@ -35,7 +35,7 @@ This repository contains Jupyter notebooks and supporting JS/Python modules for 
 
 ---
 
-### `workshop_projects.ipynb`
+### `workshop_projects.ipynb` & `workshop_projects.ts`
 
 **Purpose:**
 
