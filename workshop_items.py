@@ -29,130 +29,44 @@ def load_csv_with_max_columns(filepath):
 
 # Function to consolidate CSV contents
 def consolidate_csv_files(folder_path="utilities/workshop_parts"):
-    # Create an object to store item quantities
     item_quantities = {}
-    
-    # Get all CSV files in the specified folder
-    csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
-    
-    if not csv_files:
-        print(f"No CSV files found in {folder_path}")
-        return None
-    
-    # Process each CSV file
-    for file in csv_files:
-        try:
-            with open(file, 'r', encoding='utf-8') as f:
-                for line in f:
-                    line = line.strip()
-                    if line and ',' in line:
-                        parts = line.split(',', 1)
-                        if len(parts) == 2:
-                            item = parts[0].strip()
-                            try:
-                                quantity = int(parts[1].strip())
-                                item_quantities[item] = item_quantities.get(item, 0) + quantity
-                            except ValueError:
-                                continue
-        except Exception as e:
-            print(f"Error reading file {file}: {str(e)}")
+    for f in glob.glob(os.path.join(folder_path, "*.csv")):
+        with open(f, encoding='utf-8') as x:
+            for l in x:
+                p = l.strip().split(',', 1)
+                if len(p) == 2:
+                    try: item_quantities[p[0].strip()] = item_quantities.get(p[0].strip(), 0) + int(p[1])
+                    except: continue
+    if not item_quantities: return None
+    df = pd.DataFrame([[k, v] for k, v in item_quantities.items()], columns=["Item", "Quantity"]).sort_values("Item")
 
-    if not item_quantities:
-        print("No valid data found in the CSV files")
-        return None
+    r, g = load_csv_with_max_columns(os.path.join("utilities", "recipe_book.csv")), load_csv_with_max_columns(os.path.join("utilities", "recipe_gathering.csv"))
+    recipes, gather = {}, {row[0]: row[1] for _, row in g.iterrows()}
+    for _, row in r.iterrows():
+        recipes[row[0]] = [(row[i], float(row[i + 1])) for i in range(1, r.shape[1], 2) if not pd.isna(row[i])]
 
-    # Convert to DataFrame and sort
-    df = pd.DataFrame(
-        [[item, qty] for item, qty in item_quantities.items()],
-        columns=['Item', 'Quantity']
-    ).sort_values('Item').reset_index(drop=True)
+    def comp(it, m=1):
+        if it in recipes:
+            res = []
+            for ing, qty in recipes[it]:
+                opts = [o.strip() for o in str(ing).split('|')]
+                res.append([comp(o, qty * m) for o in opts] if len(opts) > 1 else comp(opts[0], qty * m))
+            return res
+        if gather.get(it, '').lower() == "crystal": return {it: m}
+        return {}
 
-    # Load recipe and gathering info
-    try:
-        recipe_book_csv = os.path.join("utilities", "recipe_book.csv")
-        recipe_gathering_csv = os.path.join("utilities", "recipe_gathering.csv")
+    def flat(g):
+        if isinstance(g, dict): return [f"{k} x {int(v)}" for k, v in g.items()]
+        if isinstance(g, list) and all(isinstance(x, dict) and x for x in g): return [" | ".join(flat(x)[0] for x in g)]
+        out = []
+        for sub in g:
+            out += flat(sub)
+        return out
 
-        df_recipe_book = load_csv_with_max_columns(recipe_book_csv)
-        df_recipe_gathering = load_csv_with_max_columns(recipe_gathering_csv)
-    except Exception as e:
-        print(f"Warning: Unable to load recipe or gathering data for crystal calculation: {e}")
-        df["Crystals Needed"] = ""
-        return df
-
-    max_fields = df_recipe_book.shape[1]
-    recipes = {}
-    for _, row in df_recipe_book.iterrows():
-        product = row[0]
-        ingredients = []
-        for i in range(1, max_fields, 2):
-            if pd.isna(row[i]):
-                break
-            ing = row[i]
-            qty = float(row[i + 1]) if (i + 1 < max_fields and not pd.isna(row[i + 1])) else 0.0
-            ingredients.append((ing, qty))
-        recipes[product] = ingredients
-
-    df_recipe_gathering.rename(columns={0: "Ingredient", 1: "Method"}, inplace=True)
-    method_map = {row["Ingredient"]: row["Method"] for _, row in df_recipe_gathering.iterrows()}
-
-    # Recursive crystal computation
-    def compute_crystals(item, multiplier=1):
-        crystal_totals = defaultdict(float)
-
-        if item in recipes:
-            for ing, qty in recipes[item]:
-                options = [opt.strip() for opt in str(ing).split('|')]
-
-                if len(options) == 1:
-                    sub_totals = compute_crystals(options[0], qty * multiplier)
-                    for k, v in sub_totals.items():
-                        crystal_totals[k] += v
-                else:
-                    for opt in options:
-                        sub_totals = compute_crystals(opt, qty * multiplier / len(options))
-                        for k, v in sub_totals.items():
-                            alt_key = f"{k} (alt)"
-                            crystal_totals[alt_key] += v
-
-        elif method_map.get(item, "").lower() == "crystal":
-            crystal_totals[item] += multiplier
-
-        return crystal_totals
-
-    # Build final crystals-needed column
-    crystal_list = []
-    for _, row in df.iterrows():
-        item_name = row["Item"]
-        item_qty = row["Quantity"]
-        crystals_needed = compute_crystals(item_name, item_qty)
-
-        required = []
-        alternatives = []
-
-        for k, v in crystals_needed.items():
-            if "(alt)" in k:
-                alt_name = k.replace(" (alt)", "").strip()
-                alternatives.append(f"{alt_name} x {int(v)}")
-            else:
-                required.append(f"{k} x {int(v)}")
-
-        combined = []
-        if required:
-            combined.append(" & ".join(required))
-        if alternatives:
-            combined.append(" | ".join(alternatives))
-
-        crystal_str = " & ".join(combined)
-        crystal_list.append(crystal_str)
-
-    df["Crystals Needed"] = crystal_list
-
-    # Save standard 2-column output
-    output_path = os.path.join("utilities", "workshop_output.csv")
-    df[["Item", "Quantity"]].to_csv(output_path, index=False, header=False)
-    print(f"Consolidated CSV saved to {output_path} (without headers)")
-
+    df["Crystals Needed"] = [" & ".join(flat(comp(row["Item"], row["Quantity"]))) for _, row in df.iterrows()]
+    df[["Item", "Quantity"]].to_csv(os.path.join("utilities", "workshop_output.csv"), index=False, header=False)
     return df
+
 
 # --- Gathering List Generation ---
 
