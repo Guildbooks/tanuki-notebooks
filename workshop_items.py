@@ -4,8 +4,6 @@ import re
 import time
 import requests
 import pandas as pd
-import os
-import glob
 from collections import defaultdict
 
 # --- Helper Functions ---
@@ -29,43 +27,99 @@ def load_csv_with_max_columns(filepath):
 
 # Function to consolidate CSV contents
 def consolidate_csv_files(folder_path="utilities/workshop_parts"):
+    import os, glob
+    import pandas as pd
+    from collections import defaultdict
+
     item_quantities = {}
     for f in glob.glob(os.path.join(folder_path, "*.csv")):
         with open(f, encoding='utf-8') as x:
             for l in x:
                 p = l.strip().split(',', 1)
                 if len(p) == 2:
-                    try: item_quantities[p[0].strip()] = item_quantities.get(p[0].strip(), 0) + int(p[1])
-                    except: continue
-    if not item_quantities: return None
-    df = pd.DataFrame([[k, v] for k, v in item_quantities.items()], columns=["Item", "Quantity"]).sort_values("Item")
+                    try:
+                        item_quantities[p[0].strip()] = item_quantities.get(p[0].strip(), 0) + int(p[1])
+                    except:
+                        continue
+    if not item_quantities:
+        return None
 
-    r, g = load_csv_with_max_columns(os.path.join("utilities", "recipe_book.csv")), load_csv_with_max_columns(os.path.join("utilities", "recipe_gathering.csv"))
-    recipes, gather = {}, {row[0]: row[1] for _, row in g.iterrows()}
+    # Load recipe and gathering data
+    r = load_csv_with_max_columns(os.path.join("utilities", "recipe_book.csv"))
+    g = load_csv_with_max_columns(os.path.join("utilities", "recipe_gathering.csv"))
+
+    recipes = {}
+    gather = {row[0]: row[1] for _, row in g.iterrows()}
+
     for _, row in r.iterrows():
-        recipes[row[0]] = [(row[i], float(row[i + 1])) for i in range(1, r.shape[1], 2) if not pd.isna(row[i])]
+        product = row[0]
+        ingredients = []
+        for i in range(1, r.shape[1], 2):
+            if pd.isna(row[i]):
+                break
+            ing = row[i]
+            qty = float(row[i + 1]) if i + 1 < r.shape[1] and not pd.isna(row[i + 1]) else 0
+            ingredients.append((ing, qty))
+        recipes[product] = ingredients
 
-    def comp(it, m=1):
-        if it in recipes:
-            res = []
-            for ing, qty in recipes[it]:
+    # Track total quantity of crafted items and what they require
+    crafted_totals = defaultdict(float)
+    requirements = defaultdict(lambda: defaultdict(float))  # parent → {ingredient: qty}
+
+    def accumulate(item, qty):
+        if item in recipes:
+            crafted_totals[item] += qty
+            for ing, ing_qty in recipes[item]:
                 opts = [o.strip() for o in str(ing).split('|')]
-                res.append([comp(o, qty * m) for o in opts] if len(opts) > 1 else comp(opts[0], qty * m))
+                for o in opts:
+                    requirements[item][o] += ing_qty * qty / len(opts)
+                    accumulate(o, ing_qty * qty / len(opts))
+
+    for item, qty in item_quantities.items():
+        accumulate(item, qty)
+
+    # Calculate crystal needs separately
+    def calc_crystals(item, qty):
+        if item in recipes:
+            res = []
+            for ing, ing_qty in recipes[item]:
+                opts = [o.strip() for o in str(ing).split('|')]
+                res.append([calc_crystals(o, ing_qty * qty / len(opts)) for o in opts] if len(opts) > 1 else calc_crystals(opts[0], ing_qty * qty))
             return res
-        if gather.get(it, '').lower() == "crystal": return {it: m}
+        if gather.get(item, '').lower() == "crystal":
+            return {item: qty}
         return {}
 
     def flat(g):
-        if isinstance(g, dict): return [f"{k} x {int(v)}" for k, v in g.items()]
-        if isinstance(g, list) and all(isinstance(x, dict) and x for x in g): return [" | ".join(flat(x)[0] for x in g)]
+        if isinstance(g, dict):
+            return [f"{k} x {int(v)}" for k, v in g.items()]
+        if isinstance(g, list) and all(isinstance(x, dict) and x for x in g):
+            return [" | ".join(flat(x)[0] for x in g)]
         out = []
         for sub in g:
             out += flat(sub)
         return out
 
-    df["Crystals Needed"] = [" & ".join(flat(comp(row["Item"], row["Quantity"]))) for _, row in df.iterrows()]
-    df[["Item", "Quantity"]].to_csv(os.path.join("utilities", "workshop_output.csv"), index=False, header=False)
-    return df
+    # Build final output for crafted items only
+    rows = []
+    for item in sorted(crafted_totals.keys()):
+        qty = int(crafted_totals[item])
+        crystal_info = calc_crystals(item, qty)
+        crystal_text = " & ".join(flat(crystal_info))
+
+        require_note = ""
+        if item in requirements:
+            reqs = [f"{int(v)} {k}" for k, v in requirements[item].items() if k in crafted_totals]
+            if reqs:
+                require_note = f"requires {', '.join(reqs)}"
+
+        rows.append([item, qty, crystal_text, require_note])
+
+    df_out = pd.DataFrame(rows, columns=["Item", "Quantity", "Crystals Needed", "Requires"])
+    df_out.to_csv(os.path.join("utilities", "workshop_output.csv"), index=False, header=False)
+    return df_out
+
+
 
 
 # --- Gathering List Generation ---
@@ -325,9 +379,11 @@ def print_recipe_tree(total_csv, recipe_book_csv, recipe_gathering_csv):
                 next_prefix = prefix + ("    " if is_last else "│   ")
                 _print_node(child, child_qty * qty, prefix=next_prefix, is_last=last_child)
 
-    # 5) Top‐level iteration
+    # 5) Top‐level iteration with a visual divider line
     print("=== Recipe Breakdown ===")
     items = list(top_level.items())
     for idx, (prod, qty) in enumerate(items):
+        if idx > 0:
+            print("|")  # Add a clean line between top-level crafts
         last_prod = (idx == len(items) - 1)
         _print_node(prod, qty, prefix="", is_last=last_prod)
