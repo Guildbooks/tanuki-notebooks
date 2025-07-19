@@ -1,26 +1,22 @@
-Ancient Lumber,234,Wind Cluster x 468 & Ice Cluster x 234,
-Cedar Lumber,54,Wind Crystal x 162,
-Cobalt Ingot,3324,Ice Shard x 8310 | Fire Shard x 8310,
-Cobalt Joint Plate,660,Ice Shard x 1650 | Fire Shard x 1650 & Ice Shard x 3300,requires 660 Cobalt Ingot
-Cobalt Rivets,420,Ice Shard x 1050 | Fire Shard x 1050 & Ice Shard x 1050 | Fire Shard x 1050,requires 420 Cobalt Ingot
-Darksteel Ingot,732,Ice Crystal x 2196 | Fire Crystal x 2196 & Ice Cluster x 366 | Fire Cluster x 366,requires 1464 Darksteel Nugget
-Darksteel Nugget,1884,Ice Crystal x 2826 | Fire Crystal x 2826,
-Electrum Ingot,528,Wind Shard x 2640,
-Horn Glue,108,Water Shard x 324,
-Iron Ingot,1056,Ice Shard x 528 | Fire Shard x 528,
-Iron Nails,528,Ice Shard x 264 | Fire Shard x 264 & Fire Shard x 528,requires 528 Iron Ingot
-Iron Rivets,528,Ice Shard x 264 | Fire Shard x 264 & Ice Shard x 264 | Fire Shard x 264,requires 528 Iron Ingot
-Linseed Oil,108,Water Shard x 324,
-Mythril Ingot,1104,Ice Shard x 1104 | Wind Shard x 1104 | Fire Shard x 1104,
-Mythril Plate,108,Ice Shard x 216 | Wind Shard x 216 | Fire Shard x 216 & Ice Shard x 432,requires 216 Mythril Ingot
-Mythril Rivets,888,Ice Shard x 888 | Wind Shard x 888 | Fire Shard x 888 & Ice Shard x 2220 | Fire Shard x 2220,requires 888 Mythril Ingot
-Rose Gold Ingot,126,Wind Crystal x 756 & Wind Cluster x 126,requires 252 Rose Gold Nugget
-Rose Gold Nugget,252,Wind Crystal x 756,
-Silver Ingot,780,Wind Shard x 1560,
-Spruce Lumber,588,Wind Crystal x 1764,
-Steel Ingot,4140,Ice Shard x 4140 | Fire Shard x 4140,
-Steel Joint Plate,780,Ice Shard x 780 | Fire Shard x 780 & Ice Shard x 2340,requires 780 Steel Ingot
-Steel Rivets,1680,Ice Shard x 1680 | Fire Shard x 1680 & Ice Shard x 2520 | Fire Shard x 2520,requires 1680 Steel Ingot
-Treated Spruce Lumber,240,Wind Crystal x 1440 & Wind Cluster x 240,requires 480 Spruce Lumber
-Varnish,108,Water Shard x 324 & Water Shard x 540,requires 108 Linseed Oil
-Walnut Lumber,108,Wind Shard x 216,
+Ancient Lumber,216
+Cedar Lumber,63
+Cobalt Ingot,1776
+Cobalt Joint Plate,636
+Cobalt Rivets,294
+Darksteel Ingot,582
+Darksteel Nugget,294
+Electrum Ingot,420
+Horn Glue,126
+Iron Nails,420
+Iron Rivets,420
+Mythril Plate,126
+Mythril Rivets,846
+Rose Gold Ingot,147
+Silver Ingot,720
+Spruce Lumber,126
+Steel Ingot,1350
+Steel Joint Plate,720
+Steel Rivets,1524
+Treated Spruce Lumber,168
+Varnish,126
+Walnut Lumber,126
