@@ -143,7 +143,7 @@ def generate_gathering_list(total_csv, recipe_book_csv, recipe_gathering_csv, ou
 
 def get_crafting_recipes(total_csv):
     """
-    Generate the list of crafting recipes from total_shark_class_sub_parts.csv.
+    Generate the list of crafting recipes from a totalized parts CSV.
     
     Returns a DataFrame with the crafted product list sorted alphabetically.
     """
@@ -152,14 +152,13 @@ def get_crafting_recipes(total_csv):
     df_crafting.rename(columns={0: "Product", 1: "Required Quantity"}, inplace=True)
     return df_crafting
 
+"""
 # --- Market Data Fetching ---
 
 def fetch_market_data(item_id, world, market_columns):
-    """
-    Query the Universalis API for market data on a given item.
+    # Query the Universalis API for market data on a given item.
+    # Returns a dictionary with market data (or None values on failure).
     
-    Returns a dictionary with market data (or None values on failure).
-    """
     url = f"https://universalis.app/api/v2/aggregated/{world}/{item_id}"
     try:
         response = requests.get(url)
@@ -184,10 +183,10 @@ def fetch_market_data(item_id, world, market_columns):
     return {col: None for col in market_columns}
 
 def fetch_market_data_for_subparts(gathering_csv, crafting_csv, item_ids_json, output_csv, world="Seraph"):
-    """
-    Combine items from the gathering list and the crafting recipes list, look up their IDs,
-    query the Universalis API for market data, and write the results to output_csv.
-    """
+    
+    # Combine items from the gathering list and the crafting recipes list, look up their IDs,
+    # query the Universalis API for market data, and write the results to output_csv.
+    
     # Load the gathering list.
     # Here we assume gathering_csv already has headers, so we use the default header.
     df_gathering = pd.read_csv(gathering_csv).copy()
@@ -254,6 +253,7 @@ def fetch_market_data_for_subparts(gathering_csv, crafting_csv, item_ids_json, o
 
     df_combined.to_csv(output_csv, index=False)
     return df_combined
+"""
 
 
 def print_recipe_tree(total_csv, recipe_book_csv, recipe_gathering_csv):
