@@ -20,7 +20,7 @@ Silver Ingot,Silver Ore,3,Wind Shard,2
 Treated Spruce Lumber,Spruce Lumber,2,Hardened Sap,9,Wind Cluster,1
 Darksteel Nugget,Darksteel Ore,3,Ice Crystal|Fire Crystal,3
 Cobalt Rivets,Cobalt Ingot,1,Ice Shard|Fire Shard,5
-Mythril Ingot,Mythril Ore,3,Ice Shard|Wind Shard|Fire Shard,3
+Mythril Ingot,Mythril Ore,3,Ice Shard|Wind Shard|Fire Shard,4
 Rose Gold Nugget,Gold Ore,3,Copper Ore,1,Wind Crystal,3
 Linseed Oil,Flax,2,Water Shard,3
 Darksteel Ingot,Darksteel Nugget,2,Coke,9,Ice Cluster|Fire Cluster,1
@@ -102,3 +102,100 @@ Cobalt Rings,Cobalt Ingot,1,Ice Shard,5
 Dhalmel Leather,Dhalmel Hide,3,Dark Chestnut Log,1,Earth Crystal,4
 High Allagan Chimera Leather,Chemically Treated Chimera Hide,3,Animal Fat,9,Black Alumen,3,Earth Cluster,1,Wind Cluster,1
 Amphiptere Leather,Amphiptere Skin,3,Dark Chestnut Log,1,Earth Crystal,5
+Ash Lumber,Ash Log,3,Wind Shard,1
+Assorted Fruit,Prickly Pineapple,1,La Noscean Orange,1,Lowland Grapes,1,Pixie Plums,1,Walnut Lumber,1,Fire Shard,6,Water Shard,6
+Astral Birch Lumber,Birch Lumber,2,Dryad Sap,5,Astral Oil,1,Wind Cluster,2,Ice Cluster,2
+Astral Oil,Seventh Heaven,2,Astral Moraine,2,Bear Fat,1,Water Cluster,2,Lightning Cluster,1
+Birch Lumber,Birch Log,5,Wind Crystal,5
+Atrociraptor Leather,Atrociraptor Skin,4,Yellow Alumen,1,Earth Crystal,7
+Bismuth Ingot,Bismuth Ore,5,Tin Ore,1,Fire Crystal,8
+Bluespirit Tile,Bluespirit Ore,4,Stiperstone,1,Fire Crystal,7
+Brass Ingot,Copper Ore,2,Zinc Ore,1,Wind Shard,1
+Bright Linen Yarn,Bright Flax,4,Lightning Crystal,3
+Camphorwood Lumber,Camphorwood Log,3,Wind Crystal,7,Ice Crystal,7
+Ceiba Lumber,Ceiba Log,5,Wind Crystal,8
+Clinker Bricks,Grenade Ash,1,Siltstone,2,Potter's Clay,1,Water Shard,5
+Cobalt Tungsten Ingot,Cobalt Tungsten Ore,5,Cobalt Ore,1,Fire Crystal,8
+Cotton Canvas,Cotton Yarn,2,Hempen Yarn,1,Beeswax,1,Lightning Shard,1
+Hempen Yarn,Moko Grass,2,Lightning Shard,1
+Beeswax,Beehive Chip,3,Water Shard,1
+Cut Stone,Granite,3,Wind Shard,3
+Dark Hempen Cloth,Dark Hemp,5,Lightning Crystal,8
+Dark Mahogany Lumber,Dark Mahogany Log,5,Wind Crystal,5
+Dark Rye Flour,Dark Rye,6,Fire Crystal,8
+Deepgold Nugget,Truegold Sand,4,Copper Ore,1,Fire Crystal,6
+Deepgold Ingot,Truegold Ore,4,Copper Ore,1,Fire Crystal,6
+Dravanian Down Tree,Dravanian Mote,1,Growth Formula Delta,3,Water Cluster,2,Lightning Cluster,2
+Growth Formula Delta,Trillium Bulb,1,Quicksilver,1,Rock Salt,1,Water Crystal,3
+Dwarven Cotton,Dwarven Cotton Thread,3,Lightning Crystal,4
+Dwarven Cotton Thread,Dwarven Cotton Boll,4,Lightning Crystal,3
+Dwarven Mythril Ingot,Dimythrite Ore,4,Mythrite Ore,1,Fire Crystal,7
+Dwarven Mythril Nugget,Dimythrite Sand,4,Mythrite Sand,1,Wind Crystal,7
+Elm Lumber,Elm Log,3,Wind Shard,1
+Enchanted Aurum Regis Ink,Aurum Regis Sand,4,Dragon Blood,2,Abalathian Spring Water,1,Water Crystal,5
+Felt Lining,Fleece,2,Grenade Ash,1,Natron,1,Lightning Shard,5
+Firebricks,Mudstone,2,Potter's Clay,1,Water Shard,1
+Gaja Leather,Gaja Hide,4,Yellow Alumen,1,Earth Crystal,8
+Gazelle Leather,Gazelle Hide,3,Persimmon Tannin,1,Earth Crystal,5
+Ginseng Lumber,Ginseng Log,5,Wind Crystal,8
+Green Glider Leather,Green Glider Skin,4,Yellow Alumen,1,Earth Crystal,6
+Growth Formula Iota,Hoptrap Leaf,2,Silkmoth Scales,2,Birch Sap,1,Water Crystal,6
+Growth Formula Kappa,Hoptrap Leaf,2,Vampire Vine Sap,2,Underground Spring Water,1,Water Crystal,7
+Growth Formula Lambda,Royal Maple Sap,4,Poison Frog Secretions,2,Water Crystal,8
+Hallowed Ramie Cloth,Ramie Cloth,1,Hallowed Water,2,Lightning Crystal,5
+Ramie Cloth,Ramie Thread,2,Linen Yarn,1,Lightning Crystal,2
+Ramie Thread,Stalk of Ramie,3,Flax,2,Lightning Crystal,2
+Hammerhead Crocodile Leather,Hammerhead Crocodile Skin,4,Eblan Alumen,1,Earth Crystal,8
+High Durium Ingot,High Durium Ore,5,Silver Ore,1,Fire Crystal,8
+High Steel Ingot,Koppranickel Ore,4,High Steel Nugget,1,Fire Crystal,3
+High Steel Nugget,Koppranickel Sand,4,Iron Ore,1,Fire Crystal,3
+Horse Chestnut Lumber,Horse Chestnut Log,5,Wind Crystal,8
+Iridescent Silk Thread,Iridescent Cocoon,4,Effervescent Water,1,Lightning Crystal,3
+Jadeite,Jade,1,Wind Shard,5
+Kudzu Cloth,Kudzu Thread,2,Ruby Cotton Yarn,1,Lightning Crystal,2
+Ruby Cotton Yarn,Ruby Cotton Boll,4,Lightning Crystal,1
+Lar Ingot,Lar Ore,5,High Durium Sand,1,Wind Crystal,8
+Larch Lumber,Larch Log,4,Wind Crystal,3
+Lignum Vitae Lumber,Lignum Vitae Log,4,Wind Crystal,7
+Manasilver Nugget,Manasilver Sand,4,Silver Ore,1,Wind Crystal,7
+Miracle Apple Lumber,Miracle Apple Log,4,Wind Crystal,6
+Moon Gel,Mousse Flesh,3,Lunatender Blossom,1,Water Crystal,8
+Mortar,Limestone,2,Fine Sand,1,Distilled Water,1,Water Shard,1
+Mountain Chromite Ingot,Mountain Chromite Ore,5,Molybdenum Ore,1,Fire Crystal,8
+Mountain Linen,Mountain Flax,5,Lightning Crystal,8
+Northern Sea Salt,Sharlayan Rock Salt,6,Fire Crystal,8
+Oroshigane Ingot,Doman Iron Ore,4,Iron Ore,1,Fire Crystal,4
+Ovim Wool Yarn,Ovim Fleece,4,Refined Natron,1,Lightning Crystal,3
+Refined Natron,Extra Effervescent Water,1,Ala Mhigan Salt Crystal,1,Water Crystal,7
+Palm Sugar,Palm Syrup,6,Fire Crystal,8
+Persimmon Lumber,Persimmon Log,4,Wind Crystal,5
+Pewter Ingot,Pewter Ore,5,Tin Ore,1,Wind Crystal,8
+Phrygian Gold Ingot,Phrygian Gold Ore,5,Zinc Ore,1,Wind Crystal,8
+Pine Lumber,Pine Log,4,Wind Crystal,4
+Pixie Cotton,Pixie Floss,3,Lightning Crystal,4
+Pixie Floss,Pixie Floss Boll,4,Lightning Crystal,3
+Red Pine Lumber,Red Pine Log,5,Wind Crystal,8
+Roof Tile,Potter's Clay,2,Straw,1,Water Shard,1
+Ruthenium Ingot,Ruthenium Ore,5,High Durium Ore,1,Fire Crystal,8
+Sandteak Lumber,Sandteak Log,4,Wind Crystal,7
+Scale Glue,Dragon Scale,3,Drake Scales,2,Biast Scales,2,Water Crystal,5
+Sea Swallow Leather,Sea Swallow Skin,4,Yellow Alumen,1,Earth Crystal,7
+Sideritis Cookie,Sideritis Leaves,3,Dark Rye Flour,1,Palm Sugar,1,Egg of Elpis,1,Fermented Butter,1,Fire Crystal,8,Water Crystal,8
+Fermented Butter,Yak Milk,5,Fire Shard,7
+Smilodon Leather,Smilodon Skin,4,Yellow Alumen,1,Earth Crystal,6
+Star Ruby,Raw Star Ruby,3,Basilisk Whetstone,1,Wind Crystal,4
+Starch Glue,Vampire Cup Vine,2,Vampire Vine Sap,2,Water Crystal,7
+Steel Hinge,Steel Ingot,1,Ice Shard,2
+Stonegold Nugget,Truegold Sand,4,Gold Ore,1,Wind Crystal,6
+Tama-hagane Ingot,Doman Iron Sand,4,Oroshigane Ingot,1,Fire Crystal,5
+Teak Lumber,Teak Log,3,Goblacquer,2,Borax,9,Wind Cluster,3,Ice Cluster,3
+Titanbronze Ingot,Titancopper Ore,4,Titanium Ore,1,Fire Crystal,7
+Titanbronze Nugget,Titancopper Sand,4,Titanium Ore,1,Wind Crystal,7
+Toad Leather,Gigantoad Skin,1,Alumen,1,Earth Shard,2
+Treated Camphorwood Lumber,Old-growth Camphorwood Log,3,Borax,2,Gobcraft Resin,2,Wind Cluster,3,Ice Cluster,2
+Twinsilk,Twinthread,3,Lightning Crystal,3
+Twinthread,Twincoon,4,Effervescent Water,1,Lightning Crystal,2
+White Ash Lumber,White Ash Log,4,Wind Crystal,7
+White Oak Lumber,White Oak Log,4,Wind Crystal,6
+Zelkova Lumber,Zelkova Log,4,Wind Crystal,5
+Zonure Leather,Zonure Skin,4,Yellow Alumen,1,Earth Crystal,7
