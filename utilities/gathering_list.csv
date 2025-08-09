@@ -1,212 +1,86 @@
 Ingredient,Total Quantity,Method,Location Info
-Abalathian Mistletoe,2196.0,timed node,"The Sea of Clouds ( 35.8 / 21.4 ), Timed at 6AM/PM ET"
-Abalathian Spring Water,2214.0,normal,The Sea of Clouds ( 34.8 / 30.5 )
-Ala Mhigan Salt Crystal,27.0,timed node,"The Lochs ( 21.2 / 28.9 ), Timed at 12AM/PM ET"
-Aldgoat Horn,2748.0,drop,ffxiv.consolegameswiki.com/wiki/Aldgoat_Horn
-Alumen,48.0,normal,Eastern Thanalan ( 18.3 / 20.9 )
-Ash Log,3420.0,normal,Central Shroud ( 26.2 / 20.3 )
-Astral Moraine,354.0,timed node,"Coerthas Western Highlands ( 37.2 / 16.4 ), Timed at 12AM/PM ET"
-Astral Rock,108.0,timed node,"Coerthas Central Highlands ( 23.3 / 24.6 ), Timed at 9PM ET"
-Atrociraptor Skin,324.0,drop,ffxiv.consolegameswiki.com/wiki/Atrociraptor_Skin
-Aurum Regis Sand,99.0,normal,The Sea of Clouds ( 34.8 / 30.5 )
-Bamboo Stick,207.0,timed node,"Upper La Noscea ( 28.6 / 25.6 ), Timed at 7AM ET"
-Basilisk Egg,216.0,normal,Northern Thanalan ( 22.4 / 24.4 )
-Bear Fat,177.0,drop,ffxiv.consolegameswiki.com/wiki/Bear_Fat
-Beech Log,756.0,normal,The Fringes ( 10.5 / 16.2 )
-Beehive Chip,2412.0,normal,North Shroud ( 26.4 / 27.3 )
-Beehive Chip,2412.0,normal,North Shroud ( 26.3 / 27.6 )
-Beetle Glue,207.0,npc,ffxiv.consolegameswiki.com/wiki/Beetle_Glue
-Biast Scales,378.0,drop,ffxiv.consolegameswiki.com/wiki/Biast_Scales
-Birch Log,1431.0,normal,"The Sea of Clouds ( 24 / 34 ), Hidden"
-Birch Log,1431.0,normal,The Sea of Clouds ( 26.5 / 33.4 )
-Birch Sap,27.0,normal,The Sea of Clouds ( 26.4 / 33.4 )
-Bismuth Ore,1134.0,normal,Mare Lamentorium ( 29.4 / 35.8 )
-Bloodhempen Cloth,81.0,npc,ffxiv.consolegameswiki.com/wiki/Bloodhempen_Cloth
-Bluespirit Ore,1395.0,normal,Lakeland ( 26.9 / 36.5 )
-Bomb Ash,3501.0,npc,ffxiv.consolegameswiki.com/wiki/Bomb_Ash
-Borax,531.0,gc seals,Sold for 250 GC Seals
-Bright Flax,324.0,normal,Lakeland ( 14.2 / 22.9 )
-Camphorwood Log,495.0,normal,The Churning Mists ( 32.5 / 31.8 )
-Carbon Fiber,426.0,npc,ffxiv.consolegameswiki.com/wiki/Carbon_Fiber
-Cassia Log,423.0,voyages,ffxiv.consolegameswiki.com/wiki/Cassia_Log
-Cedar Log,3645.0,normal,Coerthas Western Highlands ( 31.3 / 32.1 )
-Ceiba Log,1161.0,normal,Kozama'uka ( 21.0 / 9.0 )
-Chocobo Feather,81.0,normal,South Shroud ( 26.2 / 19.0 )
-Cloud Acorn,216.0,gardening,Cloud Acorn Sapling
-Cloud Mica,216.0,normal,The Churning Mists ( 27.6 / 19.2 )
-Cobalt Ore,11355.0,normal,Northern Thanalan ( 23.1 / 24.2 )
-Cobalt Tungsten Ore,270.0,normal,Yak T'el ( 11.9 / 19.5 )
-Coconut,189.0,normal,Thavnair ( 16.9 / 22.2 )
-Coke,81.0,gc seals,Sold for 200 GC Seals
-Copper Ore,936.0,npc,ffxiv.consolegameswiki.com/wiki/Copper_Ore
-Cotton Boll,1788.0,normal,Central Shroud ( 22.5 / 24.3 )
-Cypress Log,135.0,timed node,"Central Shroud ( 24.3 / 31.0 ), Timed at 10AM ET"
-Dark Chestnut Log,4713.0,normal,The Dravanian Forelands ( 26.6 / 27.1 )
-Dark Hemp,675.0,normal,Labyrinthos ( 27.9 / 16.9 )
-Dark Mahogany Log,594.0,normal,Yak T'el ( 20.1 / 24.5 )
-Dark Rye,3078.0,normal,Labyrinthos ( 27.9 / 16.9 )
-Darksteel Ore,486.0,timed node,"Coerthas Central Highlands ( 27.5 / 20.0 ), Timed at 1:00am"
-Dawnborne Aethersand,123.0,special,Aetherial Reduction from Certain Items
-Dhalmel Hide,144.0,drop,ffxiv.consolegameswiki.com/wiki/Dhalmel_Hide
-Dimythrite Ore,3357.0,normal,Lakeland ( 36.0 / 14.2 )
-Dimythrite Sand,1656.0,normal,Amh Araeng ( 16.4 / 11.4 )
-Distilled Water,1509.0,npc,ffxiv.consolegameswiki.com/wiki/Distilled_Water
-Doman Iron Ore,1104.0,normal,Yanxia ( 31.6 / 21.6 )
-Doman Iron Sand,432.0,normal,The Azim Steppe ( 29.3 / 15.3 )
-Dragon Blood,36.0,drop,ffxiv.consolegameswiki.com/wiki/Dragon_Blood
-Dragon Scale,567.0,drop,ffxiv.consolegameswiki.com/wiki/Dragon_Scale
-Drake Scales,378.0,drop,ffxiv.consolegameswiki.com/wiki/Drake_Scales
-Dravanian Mote,18.0,voyages,ffxiv.consolegameswiki.com/wiki/Dravanian_Mote
-Dryad Sap,270.0,npc,ffxiv.consolegameswiki.com/wiki/Dryad_Sap
-Durium Sand,45.0,normal,The Azim Steppe ( 29.3 / 15.3 )
-Dwarven Cotton Boll,4212.0,normal,Kholusia ( 13.5 / 14.3 )
-Earth Cluster,18.0,crystal,universalis.app/market/17
-Earth Crystal,6078.0,crystal,universalis.app/market/11
-Earth Shard,96.0,crystal,universalis.app/market/5
-Eblan Alumen,81.0,normal,Garlemald ( 21.0 / 29.0 )
-Ebony Log,135.0,timed node,"Middle La Noscea ( 24.3 / 26.4 ), Timed at 4AM ET"
-Effervescent Water,3507.0,normal,South Shroud ( 16.0 / 19.7 )
-Egg of Elpis,216.0,drop,ffxiv.consolegameswiki.com/wiki/Egg_of_Elpis
-Elder Nutmeg Seeds,81.0,normal,Elpis ( 9.0 / 23.1 )
-Electrum Ore,1800.0,normal,Upper La Noscea ( 30.4 / 25.4 )
-Elm Log,7002.0,normal,Central Shroud ( 21.2 / 20.4 )
-Extra Effervescent Water,27.0,normal,The Rak'tika Greatwood ( 25.6 / 29.1 )
-Fine Sand,1509.0,normal,Central Thanalan ( 14.5 / 22.6 )
-Fire Cluster,702.0,crystal,universalis.app/market/14
-Fire Crystal,32995.5,crystal,universalis.app/market/8
-Fire Shard,44386.5,crystal,universalis.app/market/2
-Flax,4506.0,normal,South Shroud ( 17.6 / 28.6 )
-Fleece,2754.0,drop,ffxiv.consolegameswiki.com/wiki/Fleece
-Gaja Hide,432.0,drop,ffxiv.consolegameswiki.com/wiki/Gaja_Hide
-Gazelle Hide,405.0,drop,ffxiv.consolegameswiki.com/wiki/Gazelle_Hide
-Gigantoad Skin,48.0,drop,ffxiv.consolegameswiki.com/wiki/Gigantoad_Skin
-Ginseng Log,1080.0,normal,Kozama'uka ( 35.0 / 34.0 )
-Glass Fiber,426.0,gc seals,Sold for 7000 GC Seals (captain)
-Gobcraft Resin,288.0,npc,ffxiv.consolegameswiki.com/wiki/Gobcraft_Resin
-Goblacquer,54.0,npc,ffxiv.consolegameswiki.com/wiki/Goblacquer
-Gold Ore,1836.0,timed node,"Eastern Thanalan ( 27.3 / 21.3 ), Timed at 9:00am"
-Granite,12327.0,normal,Central Shroud ( 13.9 / 21.8 )
-Green Glider Skin,216.0,drop,ffxiv.consolegameswiki.com/wiki/Green_Glider_Skin
-Grenade Ash,3102.0,npc,ffxiv.consolegameswiki.com/wiki/Grenade_Ash
-Hammerhead Crocodile Skin,324.0,drop,ffxiv.consolegameswiki.com/wiki/Hammerhead_Crocodile_Skin
-Hardened Sap,1269.0,gc seals,Sold for 200 GC Seals
-Hardsilver Sand,135.0,normal,The Churning Mists ( 27.9 / 19.5 )
-High Durium Ore,1539.0,normal,Thavnair ( 19.3 / 31.0 )
-High Durium Sand,135.0,normal,Labyrinthos ( 22.7 / 12.0 )
-Holy Water,846.0,npc,ffxiv.consolegameswiki.com/wiki/Holy_Water
-Hoptrap Leaf,378.0,drop,ffxiv.consolegameswiki.com/wiki/Hoptrap_Leaf
-Horse Chestnut Log,945.0,normal,Labyrinthos ( 15.5 / 6.5 )
-Humus,378.0,normal,Central Shroud ( 18.7 / 19.8 )
-Ice Cluster,750.0,crystal,universalis.app/market/15
-Ice Crystal,3211.5,crystal,universalis.app/market/9
-Ice Shard,31642.5,crystal,universalis.app/market/3
-Iridescent Cocoon,324.0,normal,Il Mheg ( 11.1 / 24.0 )
-Iron Ore,21276.0,npc,ffxiv.consolegameswiki.com/wiki/Iron_Ore
-Island Seedling,108.0,normal,Western La Noscea ( 31.8 / 29.0 )
-Jade,54.0,normal,Coerthas Central Highlands ( 24.2 / 19.9 )
-Koppranickel Ore,108.0,normal,The Ruby Sea ( 24.1 / 35.9 )
-Koppranickel Sand,756.0,normal,The Peaks ( 23.3 / 13.1 )
-Kudzu Thread,198.0,npc,ffxiv.consolegameswiki.com/wiki/Kudzu_Thread
-La Noscean Orange,27.0,normal,Lower La Noscea ( 32.3 / 16.4 )
-Lar Ore,675.0,normal,Urqopacha ( 17.0 / 27.0 )
-Larch Log,1458.0,normal,The Ruby Sea ( 20.7 / 6.8 )
-Lightning Cluster,213.0,crystal,universalis.app/market/18
-Lightning Crystal,13404.0,crystal,universalis.app/market/12
-Lightning Shard,14013.0,crystal,universalis.app/market/6
-Lignum Vitae Log,2115.0,normal,Lakeland ( 12.4 / 10.2 )
-Limestone,3153.0,normal,Western La Noscea ( 28.5 / 22.9 )
-Lowland Grapes,27.0,normal,Lower La Noscea ( 26.4 / 22.3 )
-Lunatender Blossom,459.0,drop,ffxiv.consolegameswiki.com/wiki/Lunatender_Blossom
-Mahogany Log,351.0,normal,Eastern La Noscea ( 19.4 / 25.6 )
-Maiden Grass,324.0,normal,Southern Thanalan ( 13.0 / 31.0 )
-Manasilver Sand,396.0,normal,The Rak'tika Greatwood ( 15.4 / 20.0 )
-Marble,1101.0,normal,Upper La Noscea ( 28.2 / 22.2 )
-Miracle Apple Log,1485.0,normal,Il Mheg ( 31.9 / 5.1 )
-Moko Grass,180.0,normal,Western Thanalan ( 24.5 / 18.8 )
-Molybdenum Ore,936.0,normal,The Lochs ( 11.4 / 16.6 )
-Mountain Chromite Ore,621.0,normal,Urqopacha ( 12.0 / 11.0 )
-Mountain Flax,405.0,normal,Urqopacha ( 8.0 / 24.0 )
-Mousse Flesh,1377.0,drop,ffxiv.consolegameswiki.com/wiki/Mousse_Flesh
-Mudstone,3456.0,npc,ffxiv.consolegameswiki.com/wiki/Mudstone
-Mythril Ore,432.0,normal,Southern Thanalan ( 25.2 / 39.9 )
-Mythrite Ore,2439.0,normal,"Coerthas Western Highlands ( 31.2 / 12.8 ), Hidden"
-Mythrite Sand,2574.0,normal,Coerthas Western Highlands ( 16.6 / 13.1 )
-Native Gold,405.0,timed node,"Central Thanalan ( 25.2 / 15.8 ), Timed at 4:00am ET"
-Oak Log,3420.0,normal,South Shroud ( 16.6 / 30.2 )
-Old-growth Camphorwood Log,432.0,timed node,"The Churning Mists ( 11.7 / 10.6 ), Timed at 8AM/PM ET"
-Ovim Fleece,108.0,drop,ffxiv.consolegameswiki.com/wiki/Ovim_Fleece
-Palladium Sand,81.0,normal,The Azim Steppe ( 29.3 / 15.3 )
-Palm Log,243.0,normal,Thavnair ( 16.9 / 22.2 )
-Palm Syrup,2916.0,normal,Thavnair ( 16.9 / 22.2 )
-Peacock Ore,2106.0,gc seals,Sold for 200 GC Seals
-Persimmon Log,2574.0,normal,The Fringes ( 9.0 / 29.9 )
-Persimmon Tannin,540.0,npc,ffxiv.consolegameswiki.com/wiki/Persimmon_Tannin
-Pewter Ore,1080.0,normal,Thavnair ( 12.3 / 12.9 )
-Phrygian Gold Ore,135.0,normal,Garlemald ( 21.0 / 29.0 )
-Pine Log,540.0,normal,Yanxia ( 35.6 / 14.8 )
-Pixie Floss Boll,1836.0,normal,The Rak'tika Greatwood ( 14.9 / 27.1 )
-Pixie Plums,27.0,normal,Upper La Noscea ( 14.4 / 24.7 )
-Platinum Ore,288.0,timed node,"Southern Thanalan ( 16.7 / 10.7 ), Timed at 4:00am ET"
-Poison Frog Secretions,378.0,drop,ffxiv.consolegameswiki.com/wiki/Poison_Frog_Secretions
-Potter's Clay,3315.0,normal,North Shroud ( 28.6 / 25.0 )
-Prickly Pineapple,27.0,timed node,"Eastern La Noscea ( 30.6 / 27.0 ), Timed at 9AM ET"
-Quicksilver,54.0,npc,ffxiv.consolegameswiki.com/wiki/Quicksilver
-Raw Amber,1128.0,normal,Eastern Thanalan ( 12.7 / 19.1 )
-Raw Star Ruby,648.0,normal,The Dravanian Forelands ( 30.3 / 15.1 )
-Raziqsand,405.0,gc seals,Sold for 1500 GC Seals
-Raziqsap,1296.0,gc seals,Sold for 250 GC Seals
-Red Pine Log,3321.0,normal,Garlemald ( 15.9 / 28.8 )
-Rock Salt,3075.0,normal,Central Thanalan ( 14.5 / 22.7 )
-Rosewood Log,1335.0,normal,East Shroud ( 16.7 / 23.3 )
-Royal Maple Sap,756.0,normal,Kozama'uka ( 21.0 / 9.0 )
-Ruby Cotton Boll,396.0,normal,The Ruby Sea ( 27.1 / 21.9 )
-Ruthenium Ore,486.0,normal,Shaaloani ( 33.0 / 6.0 )
-Sandteak Log,2457.0,normal,Amh Araeng ( 16.1 / 30.0 )
-Sea Swallow Skin,1296.0,drop,ffxiv.consolegameswiki.com/wiki/Sea_Swallow_Skin
-Seventh Heaven,354.0,timed node,"The Churning Mists ( 16.7 / 36.8 ), Timed at 4:00AM/PM ET"
-Sharlayan Rock Salt,486.0,normal,Labyrinthos ( 32.3 / 9.6 )
-Shroud Seedling,270.0,normal,East Shroud ( 18.3 / 28 )
-Sideritis Leaves,648.0,normal,Elpis ( 20.7 / 23.7 )
-Silex,2496.0,normal,Southern Thanalan ( 22.4 / 29.7 )
-Silkmoth Scales,54.0,drop,ffxiv.consolegameswiki.com/wiki/Silkmoth_Scales
-Siltstone,3018.0,normal,Upper La Noscea ( 12.9 / 25.6 )
-Silver Ore,396.0,normal,South Shroud ( 16.1 / 19.7 )
-Slate,495.0,normal,The Peaks ( 23.3 / 13.1 )
-Smilodon Skin,108.0,drop,ffxiv.consolegameswiki.com/wiki/Smilodon_Skin
-Sphalerite,18.0,npc,ffxiv.consolegameswiki.com/wiki/Sphalerite
-Spruce Log,1761.0,timed node,"Coerthas Central Highlands ( 29.5 / 13.1 ), Timed at 9:00am"
-Stalk of Ramie,270.0,normal,The Dravanian Forelands ( 37.5 / 19.5 )
-Stiperstone,342.0,normal,The Peaks ( 23.3 / 13.1 )
-Straw,1422.0,normal,Middle La Noscea ( 22.6 / 19.1 )
-Sykon,162.0,normal,Elpis ( 9.0 / 23.1 )
-Teak Log,81.0,timed node,"The Dravanian Hinterlands ( 7.6 / 28.0 ), Timed at 12AM/PM ET"
-Terebinth,564.0,npc,ffxiv.consolegameswiki.com/wiki/Terebinth
-Tiger Leather,99.0,npc,ffxiv.consolegameswiki.com/wiki/Tiger_Leather
-Tin Ore,405.0,normal,Central Thanalan ( 19.9 / 22.2 )
-Titancopper Ore,2043.0,normal,Lakeland ( 36.0 / 14.2 )
-Titancopper Sand,324.0,normal,Amh Araeng ( 16.4 / 11.4 )
-Titanium Ore,1620.0,normal,The Dravanian Forelands ( 30.3 / 15.1 )
-Trillium Bulb,54.0,timed node,"East Shroud ( 13.7 / 23.0 ), Timed at 9PM ET"
-Truegold Ore,837.0,normal,Il Mheg ( 6.5 / 18.9 )
-Truegold Sand,648.0,normal,Kholusia ( 22.8 / 31.7 )
-Twincoon,1620.0,normal,The Peaks ( 26.5 / 31.2 )
-Underground Spring Water,162.0,normal,Lakeland ( 36.0 / 14.2 )
-Vampire Cup Vine,1620.0,drop,ffxiv.consolegameswiki.com/wiki/Vampire_Cup_Vine
-Vampire Vine Sap,1944.0,drop,ffxiv.consolegameswiki.com/wiki/Vampire_Vine_Sap
-Vivianite,27.0,voyages,ffxiv.consolegameswiki.com/wiki/Vivianite
-Walnut Log,8757.0,normal,South Shroud ( 23.1 / 21.6 )
-Water Cluster,390.0,crystal,universalis.app/market/19
-Water Crystal,23736.0,crystal,universalis.app/market/13
-Water Shard,29832.0,crystal,universalis.app/market/7
-White Ash Log,3996.0,normal,The Rak'tika Greatwood ( 10.0 / 20.5 )
-White Oak Log,837.0,normal,Kholusia ( 27.6 / 24.6 )
-Wind Cluster,2481.0,crystal,universalis.app/market/16
-Wind Crystal,59121.0,crystal,universalis.app/market/10
-Wind Shard,32655.0,crystal,universalis.app/market/4
-Wyrm Obsidian,261.0,normal,The Dravanian Hinterlands ( 25.3 / 25.0 )
-Yak Milk,1080.0,npc,ffxiv.consolegameswiki.com/wiki/Yak_Milk
-Yellow Alumen,648.0,normal,Amh Araeng ( 30.3 / 22.9 )
-Yew Log,6840.0,normal,East Shroud ( 15.2 / 27.4 )
-Zelkova Log,2397.0,normal,The Lochs ( 28.3 / 9.8 )
-Zinc Ore,99.0,normal,Central Thanalan ( 20.1 / 22.5 )
-Zonure Skin,216.0,drop,ffxiv.consolegameswiki.com/wiki/Zonure_Skin
+Abalathian Mistletoe,36.0,timed node,"The Sea of Clouds ( 35.8 / 21.4 ), Timed at 6AM/PM ET"
+Abalathian Spring Water,63.0,normal,The Sea of Clouds ( 34.8 / 30.5 )
+Adamantite Ore,15.0,timed node,"Azys Lla ( 23.2 / 5.8 ), Timed at 12AM/PM ET"
+Amphiptere Skin,54.0,drop,ffxiv.consolegameswiki.com/wiki/Amphiptere_Skin
+Animal Fat,54.0,gc seals,Sold for 200 GC Seals
+Astral Moraine,114.0,timed node,"Coerthas Western Highlands ( 37.2 / 16.4 ), Timed at 12AM/PM ET"
+Aurum Regis Sand,108.0,normal,The Sea of Clouds ( 34.8 / 30.5 )
+Basilisk Egg,12.0,normal,Northern Thanalan ( 22.4 / 24.4 )
+Bear Fat,57.0,drop,ffxiv.consolegameswiki.com/wiki/Bear_Fat
+Birch Log,90.0,normal,"The Sea of Clouds ( 24 / 34 ), Hidden"
+Birch Log,90.0,normal,The Sea of Clouds ( 26.5 / 33.4 )
+Black Alumen,12.0,normal,South Shroud ( 28.7 / 22.8 )
+Camphorwood Log,9.0,normal,The Churning Mists ( 32.5 / 31.8 )
+Cassia Log,36.0,voyages,ffxiv.consolegameswiki.com/wiki/Cassia_Log
+Cloud Mica,78.0,normal,The Churning Mists ( 27.6 / 19.2 )
+Cobalt Ore,100.0,normal,Northern Thanalan ( 23.1 / 24.2 )
+Coke,207.0,gc seals,Sold for 200 GC Seals
+Copper Ore,72.0,npc,ffxiv.consolegameswiki.com/wiki/Copper_Ore
+Dark Chestnut Log,135.0,normal,The Dravanian Forelands ( 26.6 / 27.1 )
+Darksteel Ore,165.0,timed node,"Coerthas Central Highlands ( 27.5 / 20.0 ), Timed at 1:00am"
+Dawnborne Aethersand,12.0,aetherial reduction,ffxiv.consolegameswiki.com/wiki/Dawnborne_Aethersand
+Deep-blue Cluster,45.0,voyages,ffxiv.consolegameswiki.com/wiki/Deep-blue_Cluster
+Deep-blue Crystal,54.0,voyages,ffxiv.consolegameswiki.com/wiki/Deep-blue_Crystal
+Deep-green Cluster,27.0,voyages,ffxiv.consolegameswiki.com/wiki/Deep-green_Cluster
+Deep-green Crystal,36.0,voyages,ffxiv.consolegameswiki.com/wiki/Deep-green_Crystal
+Deep-red Cluster,63.0,voyages,ffxiv.consolegameswiki.com/wiki/Deep-red_Cluster
+Deep-red Crystal,63.0,voyages,ffxiv.consolegameswiki.com/wiki/Deep-red_Crystal
+Deepeye Tears,102.0,drop,ffxiv.consolegameswiki.com/wiki/Deepeye_Tears
+Dhalmel Saliva,18.0,drop,ffxiv.consolegameswiki.com/wiki/Dhalmel_Saliva
+Dragon Blood,54.0,drop,ffxiv.consolegameswiki.com/wiki/Dragon_Blood
+Dragon Skin,36.0,drop,ffxiv.consolegameswiki.com/wiki/Dragon_Skin
+Dravanian Spring Water,9.0,normal,The Dravanian Forelands ( 27.4 / 31.8 )
+Duskborne Aethersand,135.0,aetherial reduction,ffxiv.consolegameswiki.com/wiki/Duskborne_Aethersand
+Earth Cluster,20.0,crystal,universalis.app/market/17
+Earth Crystal,186.0,crystal,universalis.app/market/11
+Eikon Metal,4.0,npc,ffxiv.consolegameswiki.com/wiki/Eikon_Metal
+Eikon Mythrite,4.0,npc,ffxiv.consolegameswiki.com/wiki/Eikon_Mythrite
+Electrum Ore,492.0,normal,Upper La Noscea ( 30.4 / 25.4 )
+Fire Cluster,54.0,crystal,universalis.app/market/14
+Fire Crystal,222.0,crystal,universalis.app/market/8
+Fire Shard,259.5,crystal,universalis.app/market/2
+Flax,36.0,normal,South Shroud ( 17.6 / 28.6 )
+Gold Ore,231.0,timed node,"Eastern Thanalan ( 27.3 / 21.3 ), Timed at 9:00am"
+Gold Sand,27.0,timed node,"Eastern Thanalan ( 26.9 / 18.6 ), Timed at 5AM ET"
+Grenade Ash,18.0,npc,ffxiv.consolegameswiki.com/wiki/Grenade_Ash
+Hardened Sap,108.0,gc seals,Sold for 200 GC Seals
+Hardsilver Ore,96.0,normal,The Dravanian Hinterlands ( 25.3 / 25 )
+Hardsilver Sand,156.0,normal,The Churning Mists ( 27.9 / 19.5 )
+Hippogryph Skin,12.0,drop,ffxiv.consolegameswiki.com/wiki/Hippogryph_Skin
+Ice Cluster,47.0,crystal,universalis.app/market/15
+Ice Crystal,243.0,crystal,universalis.app/market/9
+Ice Shard,169.5,crystal,universalis.app/market/3
+Iron Ore,69.0,npc,ffxiv.consolegameswiki.com/wiki/Iron_Ore
+Lightning Cluster,153.0,crystal,universalis.app/market/18
+Lumythrite Ore,6.0,timed node,"The Churning Mists ( 9.3 / 38.5 ), Timed at 2AM/PM ET"
+Mythril Ore,36.0,normal,Southern Thanalan ( 25.2 / 39.9 )
+Mythrite Ore,40.0,normal,"Coerthas Western Highlands ( 31.2 / 12.8 ), (Hidden)"
+Mythrite Sand,141.0,normal,Coerthas Western Highlands ( 16.6 / 13.1 )
+Native Gold,15.0,timed node,"Central Thanalan ( 25.2 / 15.8 ), Timed at 4:00am ET"
+Peacock Ore,324.0,gc seals,Sold for 200 GC Seals
+Petrified Log,6.0,gc seals,Sold for 1500 GC Seals
+Platinum Ore,18.0,timed node,"Southern Thanalan ( 16.7 / 10.7 ), Timed at 4:00am ET"
+Raw Amber,36.0,normal,Eastern Thanalan ( 12.7 / 19.1 )
+Raw Chrysolite,6.0,normal,The Dravanian Hinterlands ( 25.3 / 25.0 )
+Raw Larimar,36.0,normal,Coerthas Western Highlands ( 31.3 / 12.6 )
+Raw Turquoise,18.0,normal,Upper La Noscea ( 30.0 / 25.2 )
+Raziqsand,15.0,gc seals,Sold for 1500 GC Seals
+Raziqsap,81.0,gc seals,Sold for 250 GC Seals
+Rosewood Log,27.0,normal,East Shroud ( 16.7 / 23.3 )
+Scarlet Sap,6.0,timed node,"North Shroud ( 17.7 / 27.7 ), Timed at 3:00am"
+Seventh Heaven,114.0,timed node,"The Churning Mists ( 16.7 / 36.8 ), Timed at 4:00AM/PM ET"
+Silver Ore,24.0,normal,South Shroud ( 16.1 / 19.7 )
+Smithsonite Ore,6.0,timed node,"The Sea of Clouds ( 37.5 / 14.5 ), Timed at 8AM/PM"
+Sphalerite,10.0,npc,ffxiv.consolegameswiki.com/wiki/Sphalerite
+Spoken Blood,9.0,drop,ffxiv.consolegameswiki.com/wiki/Spoken_Blood
+Terebinth,18.0,npc,ffxiv.consolegameswiki.com/wiki/Terebinth
+Titanium Ore,90.0,normal,The Dravanian Forelands ( 30.3 / 15.1 )
+Unaspected Crystal,96.0,timed node,ffxiv.consolegameswiki.com/wiki/Unaspected_Crystal
+Vivianite,15.0,voyages,ffxiv.consolegameswiki.com/wiki/Vivianite
+Water Cluster,255.0,crystal,universalis.app/market/19
+Water Crystal,288.0,crystal,universalis.app/market/13
+Water Shard,144.0,crystal,universalis.app/market/7
+Wind Cluster,150.0,crystal,universalis.app/market/16
+Wind Crystal,760.0,crystal,universalis.app/market/10
+Wind Shard,831.0,crystal,universalis.app/market/4

@@ -1,180 +1,42 @@
-Ash Lumber,1140
-Assorted Fruit,27
-Astral Birch Lumber,54
-Astral Rock,108
-Atrociraptor Leather,81
-Aurum Regis Sand,27
-Bamboo Stick,207
-Beech Log,36
-Beech Lumber,180
-Beetle Glue,207
-Birch Log,81
-Birch Lumber,162
-Bismuth Ingot,189
-Bismuth Ore,189
-Bloodhempen Cloth,81
-Bluespirit Ore,27
-Bluespirit Tile,342
-Brass Ingot,72
-Bright Linen Yarn,81
-Camphorwood Log,162
-Camphorwood Lumber,111
-Cassia Block,123
-Cassia Lumber,18
-Cedar Lumber,306
-Ceiba Log,81
-Ceiba Lumber,216
-Chocobo Feather,81
-Clear Glass Lens,1218
-Clinker Bricks,1509
-Cloud Acorn,216
-Cobalt Ingot,306
-Cobalt Joint Plate,2280
-Cobalt Nails,2772
-Cobalt Rivets,180
-Cobalt Tungsten Ingot,54
-Coconut,189
-Cotton Canvas,90
-Cut Stone,3702
-Cypress Log,135
-Dark Chestnut Log,120
-Dark Chestnut Lumber,369
-Dark Hempen Cloth,135
-Dark Mahogany Log,189
-Dark Mahogany Lumber,81
-Dark Rye Flour,297
-Darksteel Plate,81
-Deepgold Ingot,189
-Deepgold Nugget,135
-Dhalmel Leather,48
-Dimythrite Ore,513
-Dravanian Down Tree,18
-Durium Sand,45
-Dwarven Cotton,324
-Dwarven Cotton Thread,81
-Dwarven Mythril Ingot,711
-Dwarven Mythril Nugget,414
-Ebony Log,135
-Elder Nutmeg Seeds,81
-Electrum Ingot,450
-Elm Lumber,2334
-Enchanted Aurum Regis Ink,18
-Felt Lining,1377
-Firebricks,1158
-Gaja Leather,108
-Galvanized Garlond Steel,9
-Gazelle Leather,135
-Ginseng Lumber,216
-Gold Ingot,405
-Granite,1221
-Green Glider Leather,54
-Growth Formula Iota,27
-Growth Formula Kappa,162
-Growth Formula Lambda,189
-Hallowed Chestnut Lumber,540
-Hallowed Ramie Cloth,9
-Hammerhead Crocodile Leather,81
-Hardsilver Nugget,27
-High Durium Ingot,270
-High Durium Ore,108
-High Steel Ingot,27
-High Steel Nugget,162
-Holy Cedar Lumber,423
-Horn Glue,1374
-Horse Chestnut Lumber,189
-Humus,378
-Iridescent Silk Thread,81
-Iron Ingot,270
-Iron Nails,2415
-Island Seedling,108
-Jadeite,54
-Kudzu Cloth,99
-Lar Ingot,135
-Larch Log,162
-Larch Lumber,324
-Lignum Vitae Log,27
-Lignum Vitae Lumber,522
-Limestone,135
-Linen Canvas,714
-Linen Yarn,126
-Mahogany Lumber,117
-Maiden Grass,324
-Manasilver Nugget,99
-Marble,1101
-Miracle Apple Log,81
-Miracle Apple Lumber,351
-Molybdenum Ingot,207
-Moon Gel,459
-Mortar,1509
-Mountain Chromite Ingot,108
-Mountain Chromite Ore,81
-Mountain Linen,81
-Mudstone,1140
-Mythrite Ingot,432
-Northern Sea Salt,81
-Oak Lumber,1140
-Oroshigane Ingot,168
-Ovim Wool Yarn,27
-Palladium Sand,81
-Palm Log,243
-Palm Sugar,270
-Persimmon Log,162
-Persimmon Lumber,603
-Persimmon Tannin,405
-Pewter Ingot,216
-Phrygian Gold Ingot,27
-Pine Lumber,135
-Pixie Cotton,117
-Pixie Floss,108
-Platinum Ingot,144
-Ramie Cloth,36
-Red Pine Log,81
-Red Pine Lumber,648
-Roof Tile,324
-Rose Gold Ingot,234
-Rosewood Log,1335
-Ruthenium Ingot,81
-Ruthenium Ore,81
-Sandteak Log,81
-Sandteak Lumber,594
-Scale Glue,189
-Sea Swallow Leather,324
-Shroud Seedling,270
-Sideritis Cookie,216
-Slate,495
-Smilodon Leather,27
-Spruce Log,1140
-Spruce Lumber,207
-Star Ruby,216
-Starch Glue,810
-Steel Hinge,525
-Steel Ingot,525
-Steel Nails,2415
-Steel Rivets,36
-Stonegold Nugget,27
-Straw,1098
-Sykon,162
-Tama-hagane Ingot,108
-Teak Lumber,27
-Tempered Glass,426
-Tiger Leather,99
-Titanbronze Ingot,459
-Titanbronze Nugget,81
-Titancopper Ore,207
-Titanium Ingot,54
-Titanium Nugget,162
-Toad Leather,48
-Treated Camphorwood Lumber,144
-Truegold Ore,81
-Twinsilk,135
-Varnish,564
-Walnut Lumber,2892
-White Ash Log,324
-White Ash Lumber,918
-White Oak Log,81
-White Oak Lumber,189
-Wyrm Obsidian,261
-Yew Lumber,2280
-Zelkova Log,81
-Zelkova Lumber,579
-Zonure Leather,54
+Adamantite Rivets,3
+Amphiptere Leather,18
+Ancient Lumber,6
+Birch Lumber,18
+Camphorwood Lumber,3
+Cassia Block,12
+Chrysolite,2
+Cobalt Ingot,9
+Cobalt Nails,18
+Cobalt Rivets,18
+Dark Chestnut Lumber,12
+Darksteel Ingot,18
+Darksteel Rivets,18
+Deep-blue Enchanted Ink,18
+Deep-green Enchanted Ink,12
+Deep-red Enchanted Ink,21
+Dragon Leather,12
+Eikon Iron Ingot,2
+Electrum Ingot,123
+Enchanted Aurum Regis Ink,27
+Enchanted Gold Ink,9
+Enchanted Hardsilver Ink,9
+Galvanized Garlond Steel,5
+Gold Ingot,15
+Hallowed Chestnut Lumber,9
+Hard Hippogryph Leather,6
+Hardsilver Ingot,24
+High Mythrite Ingot,2
+Larimar,12
+Mythril Ingot,9
+Mythrite Ingot,9
+Mythrite Sand,96
+Platinum Ingot,9
+Rose Gold Ingot,36
+Rosewood Lumber,9
+Superior Deep-blue Enchanted Ink,15
+Superior Deep-green Enchanted Ink,9
+Superior Deep-red Enchanted Ink,21
+Titanium Ingot,18
+Turquoise,18
+Unaspected Crystal,96
+Varnish,18

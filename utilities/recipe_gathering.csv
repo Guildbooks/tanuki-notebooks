@@ -25,7 +25,7 @@ Potash,gc seals,Sold for 200 GC Seals
 Coke,gc seals,Sold for 200 GC Seals
 Vivianite,voyages,ffxiv.consolegameswiki.com/wiki/Vivianite
 Mythrite Sand,normal,Coerthas Western Highlands ( 16.6 / 13.1 )
-Mythrite Ore,normal,Coerthas Western Highlands ( 31.2 / 12.8 ),Hidden
+Mythrite Ore,normal,Coerthas Western Highlands ( 31.2 / 12.8 ),(Hidden)
 Oak Log,normal,South Shroud ( 16.6 / 30.2 )
 Black Alumen,normal,South Shroud ( 28.7 / 22.8 )
 Uraeus Skin,drop,ffxiv.consolegameswiki.com/wiki/Uraeus_Skin
@@ -68,7 +68,7 @@ Raw Topaz,timed node,Northern Thanalan ( 18.0 / 20.0 ),Timed at 3:00am ET
 Dark Chestnut Log,normal,The Dravanian Forelands ( 26.6 / 27.1 )
 Adamantite Ore,timed node,Azys Lla ( 23.2 / 5.8 ),Timed at 12AM/PM ET
 Birch Log,normal,The Sea of Clouds ( 24 / 34 ),Hidden
-Dawnborne Aethersand,special,Aetherial Reduction from Certain Items
+Dawnborne Aethersand,aetherial reduction,ffxiv.consolegameswiki.com/wiki/Dawnborne_Aethersand
 Seventh Heaven,timed node,The Churning Mists ( 16.7 / 36.8 ),Timed at 4:00AM/PM ET
 Astral Moraine,timed node,Coerthas Western Highlands ( 37.2 / 16.4 ),Timed at 12AM/PM ET
 Kamacite Ore,voyages,ffxiv.consolegameswiki.com/wiki/Kamacite_Ore
@@ -255,3 +255,16 @@ White Oak Log,normal,Kholusia ( 27.6 / 24.6 )
 Wyrm Obsidian,normal,The Dravanian Hinterlands ( 25.3 / 25.0 )
 Zelkova Log,normal,The Lochs ( 28.3 / 9.8 )
 Zonure Skin,drop,ffxiv.consolegameswiki.com/wiki/Zonure_Skin
+Raw Chrysolite,normal,The Dravanian Hinterlands ( 25.3 / 25.0 )
+Deep-blue Crystal,voyages,ffxiv.consolegameswiki.com/wiki/Deep-blue_Crystal
+Deepeye Tears,drop,ffxiv.consolegameswiki.com/wiki/Deepeye_Tears
+Deep-green Crystal,voyages,ffxiv.consolegameswiki.com/wiki/Deep-green_Crystal
+Deep-red Crystal,voyages,ffxiv.consolegameswiki.com/wiki/Deep-red_Crystal
+Gold Sand,timed node,Eastern Thanalan ( 26.9 / 18.6 ),Timed at 5AM ET
+Spoken Blood,drop,ffxiv.consolegameswiki.com/wiki/Spoken_Blood
+Raw Turquoise,normal,Upper La Noscea ( 30.0 / 25.2 )
+Unaspected Crystal,timed node,ffxiv.consolegameswiki.com/wiki/Unaspected_Crystal
+Duskborne Aethersand,aetherial reduction,ffxiv.consolegameswiki.com/wiki/Duskborne_Aethersand
+Deep-blue Cluster,voyages,ffxiv.consolegameswiki.com/wiki/Deep-blue_Cluster
+Deep-green Cluster,voyages,ffxiv.consolegameswiki.com/wiki/Deep-green_Cluster
+Deep-red Cluster,voyages,ffxiv.consolegameswiki.com/wiki/Deep-red_Cluster
