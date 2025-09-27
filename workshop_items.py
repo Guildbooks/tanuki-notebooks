@@ -11,13 +11,13 @@ from collections import defaultdict
 # --- Helper Functions ---
 
 def max_columns_in_csv(filepath):
-    """Determine the maximum number of columns in a CSV file."""
+    """Return max # of columns in CSV file."""
     with open(filepath, newline='') as f:
         reader = csv.reader(f)
         return max(len(row) for row in reader)
 
 def load_csv_with_max_columns(filepath):
-    """Load a CSV file using the Python engine and ensure uniform column count."""
+    """Load CSV file with uniform amount of columns."""
     max_fields = max_columns_in_csv(filepath)
     return pd.read_csv(
         filepath,
@@ -27,7 +27,7 @@ def load_csv_with_max_columns(filepath):
         on_bad_lines='skip'  # Skip lines with too many fields
     )
 
-# Function to consolidate CSV contents
+# Function to consolidate input CSV files in the utilities folder.
 def consolidate_csv_files(folder_path="utilities/workshop_parts"):
     item_quantities = {}
     for f in glob.glob(os.path.join(folder_path, "*.csv")):
@@ -152,130 +152,17 @@ def get_crafting_recipes(total_csv):
     df_crafting.rename(columns={0: "Product", 1: "Required Quantity"}, inplace=True)
     return df_crafting
 
-"""
-# --- Market Data Fetching ---
-
-def fetch_market_data(item_id, world, market_columns):
-    # Query the Universalis API for market data on a given item.
-    # Returns a dictionary with market data (or None values on failure).
-    
-    url = f"https://universalis.app/api/v2/aggregated/{world}/{item_id}"
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            if "results" in data and len(data["results"]) > 0:
-                result = data["results"][0]
-                return {
-                    "minListing_world": result.get("nq", {}).get("minListing", {}).get("world", {}).get("price"),
-                    "minListing_dc": result.get("nq", {}).get("minListing", {}).get("dc", {}).get("price"),
-                    "recentPurchase_world": result.get("nq", {}).get("recentPurchase", {}).get("world", {}).get("price"),
-                    "recentPurchase_dc": result.get("nq", {}).get("recentPurchase", {}).get("dc", {}).get("price"),
-                    "averageSalePrice_dc": result.get("nq", {}).get("averageSalePrice", {}).get("dc", {}).get("price"),
-                    "dailySaleVelocity_dc": result.get("nq", {}).get("dailySaleVelocity", {}).get("dc", {}).get("quantity"),
-                }
-            else:
-                print(f"No results found for item ID {item_id}")
-        else:
-            print(f"Error fetching data for item ID {item_id}. Status code: {response.status_code}")
-    except Exception as e:
-        print(f"Exception for item ID {item_id}: {e}")
-    return {col: None for col in market_columns}
-
-def fetch_market_data_for_subparts(gathering_csv, crafting_csv, item_ids_json, output_csv, world="Seraph"):
-    
-    # Combine items from the gathering list and the crafting recipes list, look up their IDs,
-    # query the Universalis API for market data, and write the results to output_csv.
-    
-    # Load the gathering list.
-    # Here we assume gathering_csv already has headers, so we use the default header.
-    df_gathering = pd.read_csv(gathering_csv).copy()
-    df_gathering = df_gathering[["Ingredient"]].copy()
-    df_gathering.rename(columns={"Ingredient": "Item Name"}, inplace=True)
-    df_gathering["Category"] = "Gathering"
-
-    # Load the crafting recipes using the helper function to handle variable columns.
-    df_crafting = load_csv_with_max_columns(crafting_csv).copy()
-    # The first column in the crafting CSV (e.g., recipe_book.csv) is the crafted product.
-    df_crafting = df_crafting[[0]].copy()
-    df_crafting.rename(columns={0: "Item Name"}, inplace=True)
-    df_crafting["Category"] = "Crafting"
-
-    # Combine the two lists and remove duplicates.
-    df_combined = pd.concat([df_gathering, df_crafting], ignore_index=True)
-    df_combined = df_combined.drop_duplicates(subset=["Item Name"])
-
-    # Load item ID mapping from JSON.
-    with open(item_ids_json, "r", encoding="utf-8") as f:
-        item_json = json.load(f)
-    item_mapping = {}
-    for item_id, names in item_json.items():
-        en_name = names.get("en", "").strip().lower()
-        if en_name:
-            item_mapping[en_name] = item_id
-
-    # Helper functions for cleaning names and looking up IDs.
-    def clean_item_name(name):
-        return name.lower().strip()
-
-    def get_item_id(name):
-        cleaned = clean_item_name(name)
-        if cleaned in item_mapping:
-            return item_mapping[cleaned]
-        else:
-            print(f"Error: No ID found for item '{name}' (cleaned as '{cleaned}').")
-            return None
-
-    df_combined["Item ID"] = df_combined["Item Name"].apply(get_item_id)
-
-    # Initialize market data columns.
-    market_columns = [
-        "minListing_world", 
-        "minListing_dc", 
-        "recentPurchase_world", 
-        "recentPurchase_dc", 
-        "averageSalePrice_dc", 
-        "dailySaleVelocity_dc"
-    ]
-    for col in market_columns:
-        df_combined[col] = None
-
-    # Fetch market data for each item.
-    for idx, row in df_combined.iterrows():
-        item_id = row["Item ID"]
-        if item_id is not None:
-            market_data = fetch_market_data(item_id, world, market_columns)
-            for key, value in market_data.items():
-                df_combined.at[idx, key] = value
-            time.sleep(0.5)
-        else:
-            print(f"Skipping market query for '{row['Item Name']}' due to missing ID.")
-
-    df_combined.to_csv(output_csv, index=False)
-    return df_combined
-"""
-
 
 def print_recipe_tree(total_csv, recipe_book_csv, recipe_gathering_csv):
     """
-    Recursively prints each top‐level product (from total_csv) as a tree:
-      ├── IngredientA (x qty)
-      │   ├── SubIngredient1 (x qty*…)
-      │   └── SubIngredient2 (x qty*…)
-      └── IngredientB (x qty)
-          └── … etc …
-    Leaf nodes show their gathering Method and Location Info in brackets.
-
-    total_csv: path to CSV with top‐level items and quantities.
-    recipe_book_csv: path to CSV with crafting recipes (product → ingredient, qty, …).
-    recipe_gathering_csv: path to CSV mapping ingredient → Method + locations.
+    Build and return the recipe tree as a formatted string (no inline prints).
     """
 
-    # 1) Build top‐level dict: {product_name: quantity}
+    # 1) Build top‐level dict
     df_total = load_csv_with_max_columns(total_csv)
     top_level = {row[0]: float(row[1]) for _, row in df_total.iterrows()}
 
-    # 2) Build recipes dict: {product: [(ingredient, qty), …]}
+    # 2) Build recipes dict
     df_recipe = load_csv_with_max_columns(recipe_book_csv)
     max_fields = df_recipe.shape[1]
     recipes = {}
@@ -290,7 +177,7 @@ def print_recipe_tree(total_csv, recipe_book_csv, recipe_gathering_csv):
             ingredients.append((ing, qty))
         recipes[product] = ingredients
 
-    # 3) Build gathering info: {ingredient: (method, location_info_string)}
+    # 3) Gathering info still parsed, but unused in printing
     df_gather = load_csv_with_max_columns(recipe_gathering_csv)
     df_gather.rename(columns={0: "Ingredient", 1: "Method"}, inplace=True)
 
@@ -306,28 +193,28 @@ def print_recipe_tree(total_csv, recipe_book_csv, recipe_gathering_csv):
         loc = _combine_location(row)
         gather_info[ing] = (method, loc)
 
-    # 4) Recursive printer
-    def _print_node(item_name, qty, prefix="", is_last=False):
-        branch = "└── " if is_last else "├── "
-        line = prefix + branch + f"{item_name} (x {qty:g})"
+    # 4) Recursive formatter
+    lines = ["=== Recipe Breakdown ==="]
 
-        if item_name not in recipes:
-            # leaf: append gathering info if available
-            if item_name in gather_info:
-                m, loc = gather_info[item_name]
-                line += f"  [{m} @ {loc}]"
-            print(line)
-        else:
-            print(line)
+    def _format_node(item_name, qty, prefix="", is_last=False):
+        branch = "└── " if is_last else "├── "
+        # 🔧 Quantity first, then name
+        line = prefix + branch + f"({qty:g}) {item_name}"
+        lines.append(line)
+
+        if item_name in recipes:
             children = recipes[item_name]
             for idx, (child, child_qty) in enumerate(children):
                 last_child = (idx == len(children) - 1)
                 next_prefix = prefix + ("    " if is_last else "│   ")
-                _print_node(child, child_qty * qty, prefix=next_prefix, is_last=last_child)
+                _format_node(child, child_qty * qty, prefix=next_prefix, is_last=last_child)
 
-    # 5) Top‐level iteration
-    print("=== Recipe Breakdown ===")
+    # 5) Top-level iteration
     items = list(top_level.items())
     for idx, (prod, qty) in enumerate(items):
         last_prod = (idx == len(items) - 1)
-        _print_node(prod, qty, prefix="", is_last=last_prod)
+        _format_node(prod, qty, prefix="", is_last=last_prod)
+        # 🔧 Add separator line after each top-level craft
+        lines.append("|")
+
+    return "\n".join(lines)
